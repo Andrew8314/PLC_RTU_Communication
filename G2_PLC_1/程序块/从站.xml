@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" />
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>从站</Name>
+      <Namespace />
+      <Number>5</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="FirstScan" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalConstant" UId="22">
+                  <Constant Name="Local~CB_1241_(RS485)_1" />
+                </Access>
+                <Access Scope="LiteralConstant" UId="23">
+                  <Constant>
+                    <ConstantType>UInt</ConstantType>
+                    <ConstantValue>2</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="Modbus_Slave_DB" />
+                    <Component Name="MB_DB" />
+                  </Symbol>
+                </Access>
+                <Part Name="Modbus_Comm_Load" Version="5.0" UId="25">
+                  <Instance Scope="GlobalVariable" UId="26">
+                    <Component Name="Modbus_Comm_Load_DB_1" />
+                  </Instance>
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="35">
+                  <Powerrail />
+                  <NameCon UId="25" Name="en" />
+                </Wire>
+                <Wire UId="36">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="REQ" />
+                </Wire>
+                <Wire UId="37">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="PORT" />
+                </Wire>
+                <Wire UId="38">
+                  <OpenCon UId="27" />
+                  <NameCon UId="25" Name="BAUD" />
+                </Wire>
+                <Wire UId="39">
+                  <IdentCon UId="23" />
+                  <NameCon UId="25" Name="PARITY" />
+                </Wire>
+                <Wire UId="40">
+                  <OpenCon UId="28" />
+                  <NameCon UId="25" Name="FLOW_CTRL" />
+                </Wire>
+                <Wire UId="41">
+                  <OpenCon UId="29" />
+                  <NameCon UId="25" Name="RTS_ON_DLY" />
+                </Wire>
+                <Wire UId="42">
+                  <OpenCon UId="30" />
+                  <NameCon UId="25" Name="RTS_OFF_DLY" />
+                </Wire>
+                <Wire UId="43">
+                  <OpenCon UId="31" />
+                  <NameCon UId="25" Name="RESP_TO" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="24" />
+                  <NameCon UId="25" Name="MB_DB" />
+                </Wire>
+                <Wire UId="45">
+                  <NameCon UId="25" Name="DONE" />
+                  <OpenCon UId="32" />
+                </Wire>
+                <Wire UId="46">
+                  <NameCon UId="25" Name="ERROR" />
+                  <OpenCon UId="33" />
+                </Wire>
+                <Wire UId="47">
+                  <NameCon UId="25" Name="STATUS" />
+                  <OpenCon UId="34" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LiteralConstant" UId="21">
+                  <Constant>
+                    <ConstantType>UInt</ConstantType>
+                    <ConstantValue>10</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="modbus源数据" />
+                    <Component Name="从站" />
+                  </Symbol>
+                </Access>
+                <Part Name="Modbus_Slave" Version="6.0" UId="23">
+                  <Instance Scope="GlobalVariable" UId="24">
+                    <Component Name="Modbus_Slave_DB" />
+                  </Instance>
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="29">
+                  <Powerrail />
+                  <NameCon UId="23" Name="en" />
+                </Wire>
+                <Wire UId="30">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="MB_ADDR" />
+                </Wire>
+                <Wire UId="31">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="MB_HOLD_REG" />
+                </Wire>
+                <Wire UId="32">
+                  <NameCon UId="23" Name="NDR" />
+                  <OpenCon UId="25" />
+                </Wire>
+                <Wire UId="33">
+                  <NameCon UId="23" Name="DR" />
+                  <OpenCon UId="26" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="23" Name="ERROR" />
+                  <OpenCon UId="27" />
+                </Wire>
+                <Wire UId="35">
+                  <NameCon UId="23" Name="STATUS" />
+                  <OpenCon UId="28" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="12" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="13" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

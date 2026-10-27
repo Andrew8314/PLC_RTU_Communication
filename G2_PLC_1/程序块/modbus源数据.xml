@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Static">
+            <Member Name="电表" Datatype="&quot;电表&quot;" />
+            <Member Name="写变频器" Datatype="&quot;写变频器&quot;">
+              <AttributeList>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="读变频器" Datatype="&quot;读变频器&quot;">
+              <AttributeList>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="中间" Datatype="Array[0..20] of Bool">
+              <AttributeList>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="电脑i" Datatype="Array[0..15] of Bool">
+              <AttributeList>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="电脑Q" Datatype="Array[0..15] of Bool">
+              <AttributeList>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="从站" Datatype="Array[0..30] of Word" />
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>modbus源数据</Name>
+      <Namespace />
+      <Number>3</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
